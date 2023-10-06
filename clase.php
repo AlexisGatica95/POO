@@ -1,7 +1,7 @@
 <?php
     class Persona{
-        public string $nombre;
-        public int $nivel_pelea;
+        private string $nombre;
+        private int $nivel_pelea;
         public string $clase='persona';
 
         public function __construct($nombre,$nivel_pelea){
@@ -17,6 +17,16 @@
 
         public function NivelDePelea(){
             return " tenes ".$this->nivel." !, ademas es una ".$this->clase;
+        }
+
+        //GETTER 
+        public function getNombre(){
+            return $this->nombre;
+        }
+
+        //SETTER
+        public function setNombre($nombre){
+            $this->nombre=$nombre;
         }
     }
 

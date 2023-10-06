@@ -3,6 +3,7 @@
         private string $nombre;
         private int $nivel_pelea;
         public string $clase='persona';
+        public static $cabello="negro";
 
         public function __construct($nombre,$nivel_pelea){
             // echo "metodo constructor se ejecuta cunado instacio una clase";
@@ -28,14 +29,12 @@
         public function setNombre($nombre){
             $this->nombre=$nombre;
         }
+
+        //STATIC se puede acceder sin instaciar la clase
+        public static function MostrarColorPelo(){
+            //puedo acceder al la variable estatica de esa manera 
+            return 'Tenes el cabello de color '.self::$cabello;
+        }
     }
 
-    // var_dump($alexis);
-
-    // echo $alexis->nombre;
-    // echo $alexis->Saludar();
-
- 
-
-    
 ?>
